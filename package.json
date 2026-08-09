@@ -12,16 +12,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ethanzhou-dev/md3-homepage.git"
+    "url": "git+https://github.com/amahteru/md3-homepage.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/ethanzhou-dev/md3-homepage/issues"
+    "url": "https://github.com/amahteru/md3-homepage/issues"
   },
-  "homepage": "https://github.com/ethanzhou-dev/md3-homepage#readme",
+  "homepage": "https://github.com/amahteru/md3-homepage#readme",
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/cloudflare": "^12.0.0",
