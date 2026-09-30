@@ -43,6 +43,7 @@ let htmlClass = `lang-${lang}`;
 if (theme) {
     htmlClass += ` ${theme}-theme`;
 }
+htmlClass += ' js-enabled';
 ---
 
 <!DOCTYPE html>
@@ -53,15 +54,6 @@ if (theme) {
     <meta name="color-scheme" content="light dark">
     <meta name="description" content={desc}>
     <title>{title}</title>
-    
-    <script is:inline>document.documentElement.classList.add('js-enabled');</script>
-    <noscript>
-        <style>
-            #app-preloader { display: none !important; }
-            .layout-container { opacity: 1 !important; }
-            .md-card { opacity: 1 !important; transform: none !important; }
-        </style>
-    </noscript>
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
