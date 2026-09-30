@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import { getStatsData } from '../utils/stats-core.js';
 
-const env = Astro.locals.runtime.env;
-const context = Astro.locals.runtime.ctx;
+const env = Astro.locals.runtime?.env;
+const context = Astro.locals.runtime?.ctx;
 const stats = await getStatsData(Astro.request, env, context);
 
 const uptimeText = `${stats.uptime.days} days, ${stats.uptime.hours} hrs`;
@@ -11,14 +11,13 @@ const visitorsText = `${stats.visitors}`;
 ---
 
 <Layout>
-    <div class="layout-container">
-        <div class="md-scrim" id="scrim"></div>
-        <nav class="md-nav-drawer" id="nav-drawer">
-            <div class="md-mobile-header" id="nav-header">
-                <md-icon-button id="drawer-close-btn" aria-label="Close menu"><md-icon translate="no">menu_open</md-icon></md-icon-button>
-                <h2 class="md-typescale-title-large drawer-header-title" data-lang="en">Menu</h2>
-                <h2 class="md-typescale-title-large drawer-header-title" data-lang="zh">菜单</h2>
-            </div>
+    <div class="md-scrim" id="scrim" aria-hidden="true"></div>
+    <nav class="md-nav-drawer" id="nav-drawer" aria-label="Main Navigation">
+        <div class="md-mobile-header" id="nav-header">
+            <md-icon-button id="drawer-close-btn" aria-label="Close menu"><md-icon translate="no">menu_open</md-icon></md-icon-button>
+            <h2 class="md-typescale-title-large drawer-header-title" data-lang="en">Menu</h2>
+            <h2 class="md-typescale-title-large drawer-header-title" data-lang="zh">菜单</h2>
+        </div>
             <div class="md-nav-content">
                 <div class="md-nav-title-container">
                     <md-icon translate="no" class="md-nav-title-icon">dashboard</md-icon>
@@ -79,7 +78,7 @@ const visitorsText = `${stats.visitors}`;
                                     <span data-lang="en">Language</span>
                                     <span data-lang="zh">界面语言</span>
                                 </span>
-                                <md-outlined-segmented-button-set id="lang-segmented-button-set">
+                                <md-outlined-segmented-button-set id="lang-segmented-button-set" aria-label="Language selection">
                                     <md-outlined-segmented-button id="btn-lang-zh" label="中文"></md-outlined-segmented-button>
                                     <md-outlined-segmented-button id="btn-lang-en" label="English"></md-outlined-segmented-button>
                                 </md-outlined-segmented-button-set>
@@ -134,7 +133,7 @@ const visitorsText = `${stats.visitors}`;
 
         <main class="md-main-content">
             <header class="md-top-app-bar">
-                <md-icon-button id="menu-btn" aria-label="Open menu"><md-icon translate="no">menu</md-icon></md-icon-button>
+                <md-icon-button id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer"><md-icon translate="no">menu</md-icon></md-icon-button>
                 <h1 class="md-typescale-title-large" data-lang="en">Ekiz's Homepage</h1>
                 <h1 class="md-typescale-title-large" data-lang="zh">Ekiz 的主页</h1>
                 <md-icon-button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme">
@@ -260,7 +259,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">x-comment-blocker</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">Browser extension to block specific comments and usernames on X (Twitter)</p>
                                 </a>
@@ -271,7 +270,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">neural-lite</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">AI chat website mimicking classic Mac OS X interface</p>
                                 </a>
@@ -282,7 +281,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">wapchat-qq</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">WAP version QQ gateway/proxy for legacy mobile phones</p>
                                 </a>
@@ -293,7 +292,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">wapchat-verify</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">Account verification portal for WapChat-QQ</p>
                                 </a>
@@ -304,7 +303,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">cf-legacy-proxy</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">Cloudflare Worker reverse proxy script that downgrades HTTP and strips HSTS to let legacy mobile phones access modern HTTPS websites</p>
                                 </a>
@@ -315,7 +314,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">gomoku</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">Five in a row mini-game website</p>
                                 </a>
@@ -326,7 +325,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">time-gauge</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">A webpage showing the passage of time</p>
                                 </a>
@@ -337,7 +336,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">white-noise</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">An Android white noise app</p>
                                 </a>
@@ -362,7 +361,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">x-comment-blocker</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">屏蔽X上的特定评论与用户名的浏览器插件</p>
                                 </a>
@@ -373,7 +372,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">neural-lite</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">模仿Mac OS X界面的AI对话聊天网站</p>
                                 </a>
@@ -384,7 +383,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">wapchat-qq</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">老手机 WAP 版 QQ 中转站</p>
                                 </a>
@@ -395,7 +394,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">wapchat-verify</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">WapChat-QQ的账号验证站</p>
                                 </a>
@@ -406,7 +405,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">cf-legacy-proxy</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">一个 Cloudflare Worker 反代脚本，通过降级 HTTP 和剥离 HSTS，让老旧手机能够访问现代 HTTPS 网站</p>
                                 </a>
@@ -417,7 +416,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">gomoku</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">五子棋小游戏网站</p>
                                 </a>
@@ -428,7 +427,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">time-gauge</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">一个网页用于展示时间的流逝</p>
                                 </a>
@@ -439,7 +438,7 @@ const visitorsText = `${stats.visitors}`;
                                     <md-focus-ring></md-focus-ring>
                                     <div class="project-header">
                                         <span class="project-title md-typescale-title-medium text-primary">white-noise</span>
-                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                        <md-icon translate="no" class="project-version text-outline" aria-hidden="true">open_in_new</md-icon>
                                     </div>
                                     <p class="project-desc md-typescale-body-medium">安卓白噪音软件</p>
                                 </a>
@@ -702,5 +701,4 @@ const visitorsText = `${stats.visitors}`;
                 Copyright &copy; 2026. All rights reserved. | Material Design 3
             </footer>
         </main>
-    </div>
 </Layout>

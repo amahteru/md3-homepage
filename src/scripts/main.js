@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     Promise.all([
-        document.fonts.ready, 
         customElements.whenDefined('md-list'),
         customElements.whenDefined('md-list-item'),
         customElements.whenDefined('md-fab'),
@@ -86,11 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
         customElements.whenDefined('md-chip-set'),
         customElements.whenDefined('md-suggestion-chip'),
         customElements.whenDefined('md-outlined-segmented-button-set'),
-        customElements.whenDefined('md-outlined-segmented-button')
+        customElements.whenDefined('md-outlined-segmented-button'),
+        customElements.whenDefined('md-outlined-card')
     ]).then(markComponentsReady);
 
     window.addEventListener('load', markComponentsReady);
-    setTimeout(markComponentsReady, 5000);
+    setTimeout(markComponentsReady, 1500);
 
     const menuBtn = document.getElementById('menu-btn');
     const drawerCloseBtn = document.getElementById('drawer-close-btn');
@@ -176,22 +176,18 @@ document.addEventListener('DOMContentLoaded', () => {
             updateThemeUI(hexColor);
         };
 
-        const doUpdate = (newCss) => {
-            updateDOM(newCss);
-        };
-
         if (activeSeedColor !== hexColor) {
             const cleanHex = hexColor.startsWith('#') ? hexColor.substring(1) : hexColor;
             fetch(`/api/theme?color=${cleanHex}`)
                 .then(res => res.text())
                 .then(css => {
-                    doUpdate(css);
+                    updateDOM(css);
                 })
                 .catch(err => {
                     console.warn("Failed to fetch dynamic theme CSS:", err);
                 });
         } else {
-            doUpdate(null);
+            updateDOM(null);
         }
     }
 
@@ -313,9 +309,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function toggleMenu() {
         if(navDrawer && scrim) {
-            navDrawer.classList.toggle('open');
+            const isOpen = navDrawer.classList.toggle('open');
             scrim.classList.toggle('open');
             document.body.classList.toggle('no-scroll');
+            if (menuBtn) {
+                menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            }
         }
     }
 

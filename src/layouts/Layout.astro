@@ -43,7 +43,6 @@ let htmlClass = `lang-${lang}`;
 if (theme) {
     htmlClass += ` ${theme}-theme`;
 }
-htmlClass += ' js-enabled'; 
 ---
 
 <!DOCTYPE html>
@@ -55,6 +54,15 @@ htmlClass += ' js-enabled';
     <meta name="description" content={desc}>
     <title>{title}</title>
     
+    <script is:inline>document.documentElement.classList.add('js-enabled');</script>
+    <noscript>
+        <style>
+            #app-preloader { display: none !important; }
+            .layout-container { opacity: 1 !important; }
+            .md-card { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,7 +72,19 @@ htmlClass += ' js-enabled';
     <style id="dynamic-theme" set:html={combinedCss}></style>
     
     <script>
-        import '@material/web/all.js';
+        import '@material/web/icon/icon.js';
+        import '@material/web/iconbutton/icon-button.js';
+        import '@material/web/divider/divider.js';
+        import '@material/web/elevation/elevation.js';
+        import '@material/web/fab/fab.js';
+        import '@material/web/list/list.js';
+        import '@material/web/list/list-item.js';
+        import '@material/web/progress/circular-progress.js';
+        import '@material/web/ripple/ripple.js';
+        import '@material/web/focus/md-focus-ring.js';
+        import '@material/web/chips/chip-set.js';
+        import '@material/web/chips/suggestion-chip.js';
+        import '@material/web/button/text-button.js';
         import '@material/web/labs/segmentedbuttonset/outlined-segmented-button-set.js';
         import '@material/web/labs/segmentedbutton/outlined-segmented-button.js';
         import '@material/web/labs/card/outlined-card.js';
@@ -72,16 +92,6 @@ htmlClass += ' js-enabled';
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
-        (function () {
-            const originalDefine = CustomElementRegistry.prototype.define;
-            CustomElementRegistry.prototype.define = function (name, constructor, options) {
-                if (this.get(name)) {
-                    console.warn(`Custom element "${name}" is already registered.`);
-                    return;
-                }
-                originalDefine.call(this, name, constructor, options);
-            };
-        })();
     </script>
     <script src="../scripts/main.js"></script>
 </head>
