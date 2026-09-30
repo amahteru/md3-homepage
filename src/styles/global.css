@@ -861,13 +861,19 @@ md-suggestion-chip {
   margin-bottom: 24px;
 }
 
-.project-card {
+md-outlined-card.project-card {
+  height: 100%;
+  --md-outlined-card-container-color: transparent;
+  --md-outlined-card-outline-color: var(--md-sys-color-outline-variant);
+  --md-outlined-card-container-shape: var(--md-sys-shape-corner-medium);
+}
+
+.project-card-content {
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding: 16px;
   border-radius: var(--md-sys-shape-corner-medium);
-  border: 1px solid var(--md-sys-color-outline-variant);
   background-color: transparent;
   text-decoration: none;
   color: var(--md-sys-color-on-surface);
@@ -875,6 +881,8 @@ md-suggestion-chip {
   position: relative;
   outline: none;
   overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 

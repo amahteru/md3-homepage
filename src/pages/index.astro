@@ -254,78 +254,94 @@ const visitorsText = `${stats.visitors}`;
                         <p class="md-typescale-body-large">Here is a list of projects I am currently working on or have
                             completed.</p>
                         <div class="projects-grid">
-                            <a href="https://github.com/amahteru/x-comment-blocker" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">x-comment-blocker</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">Browser extension to block specific comments and usernames on X (Twitter)</p>
-                            </a>
-                            <a href="https://github.com/amahteru/neural-lite" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">neural-lite</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">AI chat website mimicking classic Mac OS X interface</p>
-                            </a>
-                            <a href="https://github.com/amahteru/wapchat-qq" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">wapchat-qq</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">WAP version QQ gateway/proxy for legacy mobile phones</p>
-                            </a>
-                            <a href="https://github.com/amahteru/wapchat-verify" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">wapchat-verify</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">Account verification portal for WapChat-QQ</p>
-                            </a>
-                            <a href="https://github.com/amahteru/cf-legacy-proxy" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">cf-legacy-proxy</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">Cloudflare Worker reverse proxy script that downgrades HTTP and strips HSTS to let legacy mobile phones access modern HTTPS websites</p>
-                            </a>
-                            <a href="https://github.com/amahteru/gomoku" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">gomoku</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">Five in a row mini-game website</p>
-                            </a>
-                            <a href="https://github.com/amahteru/time-gauge" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">time-gauge</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">A webpage showing the passage of time</p>
-                            </a>
-                            <a href="https://github.com/amahteru/white-noise" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">white-noise</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">An Android white noise app</p>
-                            </a>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/x-comment-blocker" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">x-comment-blocker</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">Browser extension to block specific comments and usernames on X (Twitter)</p>
+                                </a>
+                            </md-outlined-card>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/neural-lite" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">neural-lite</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">AI chat website mimicking classic Mac OS X interface</p>
+                                </a>
+                            </md-outlined-card>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/wapchat-qq" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">wapchat-qq</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">WAP version QQ gateway/proxy for legacy mobile phones</p>
+                                </a>
+                            </md-outlined-card>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/wapchat-verify" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">wapchat-verify</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">Account verification portal for WapChat-QQ</p>
+                                </a>
+                            </md-outlined-card>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/cf-legacy-proxy" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">cf-legacy-proxy</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">Cloudflare Worker reverse proxy script that downgrades HTTP and strips HSTS to let legacy mobile phones access modern HTTPS websites</p>
+                                </a>
+                            </md-outlined-card>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/gomoku" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">gomoku</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">Five in a row mini-game website</p>
+                                </a>
+                            </md-outlined-card>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/time-gauge" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">time-gauge</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">A webpage showing the passage of time</p>
+                                </a>
+                            </md-outlined-card>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/white-noise" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">white-noise</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">An Android white noise app</p>
+                                </a>
+                            </md-outlined-card>
                         </div>
                         <h3 class="md-typescale-title-large text-primary section-title"><md-icon translate="no">lightbulb</md-icon>Upcoming Ideas</h3>
                         <ul class="md-list md-typescale-body-large">
@@ -340,78 +356,94 @@ const visitorsText = `${stats.visitors}`;
                         <h2 class="md-typescale-headline-medium text-primary">项目归档</h2>
                         <p class="md-typescale-body-large">以下是我目前正在开发或已完成的项目列表。</p>
                         <div class="projects-grid">
-                            <a href="https://github.com/amahteru/x-comment-blocker" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">x-comment-blocker</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">屏蔽X上的特定评论与用户名的浏览器插件</p>
-                            </a>
-                            <a href="https://github.com/amahteru/neural-lite" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">neural-lite</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">模仿Mac OS X界面的AI对话聊天网站</p>
-                            </a>
-                            <a href="https://github.com/amahteru/wapchat-qq" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">wapchat-qq</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">老手机 WAP 版 QQ 中转站</p>
-                            </a>
-                            <a href="https://github.com/amahteru/wapchat-verify" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">wapchat-verify</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">WapChat-QQ的账号验证站</p>
-                            </a>
-                            <a href="https://github.com/amahteru/cf-legacy-proxy" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">cf-legacy-proxy</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">一个 Cloudflare Worker 反代脚本，通过降级 HTTP 和剥离 HSTS，让老旧手机能够访问现代 HTTPS 网站</p>
-                            </a>
-                            <a href="https://github.com/amahteru/gomoku" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">gomoku</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">五子棋小游戏网站</p>
-                            </a>
-                            <a href="https://github.com/amahteru/time-gauge" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">time-gauge</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">一个网页用于展示时间的流逝</p>
-                            </a>
-                            <a href="https://github.com/amahteru/white-noise" target="_blank" class="project-card">
-                                <md-ripple></md-ripple>
-                                <md-focus-ring></md-focus-ring>
-                                <div class="project-header">
-                                    <span class="project-title md-typescale-title-medium text-primary">white-noise</span>
-                                    <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
-                                </div>
-                                <p class="project-desc md-typescale-body-medium">安卓白噪音软件</p>
-                            </a>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/x-comment-blocker" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">x-comment-blocker</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">屏蔽X上的特定评论与用户名的浏览器插件</p>
+                                </a>
+                            </md-outlined-card>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/neural-lite" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">neural-lite</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">模仿Mac OS X界面的AI对话聊天网站</p>
+                                </a>
+                            </md-outlined-card>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/wapchat-qq" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">wapchat-qq</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">老手机 WAP 版 QQ 中转站</p>
+                                </a>
+                            </md-outlined-card>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/wapchat-verify" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">wapchat-verify</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">WapChat-QQ的账号验证站</p>
+                                </a>
+                            </md-outlined-card>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/cf-legacy-proxy" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">cf-legacy-proxy</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">一个 Cloudflare Worker 反代脚本，通过降级 HTTP 和剥离 HSTS，让老旧手机能够访问现代 HTTPS 网站</p>
+                                </a>
+                            </md-outlined-card>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/gomoku" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">gomoku</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">五子棋小游戏网站</p>
+                                </a>
+                            </md-outlined-card>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/time-gauge" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">time-gauge</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">一个网页用于展示时间的流逝</p>
+                                </a>
+                            </md-outlined-card>
+                            <md-outlined-card class="project-card">
+                                <a href="https://github.com/amahteru/white-noise" target="_blank" class="project-card-content">
+                                    <md-ripple></md-ripple>
+                                    <md-focus-ring></md-focus-ring>
+                                    <div class="project-header">
+                                        <span class="project-title md-typescale-title-medium text-primary">white-noise</span>
+                                        <md-icon translate="no" class="project-version text-outline">open_in_new</md-icon>
+                                    </div>
+                                    <p class="project-desc md-typescale-body-medium">安卓白噪音软件</p>
+                                </a>
+                            </md-outlined-card>
                         </div>
                         <h3 class="md-typescale-title-large text-primary section-title"><md-icon translate="no">lightbulb</md-icon>待做构想</h3>
                         <ul class="md-list md-typescale-body-large">
